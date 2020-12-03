@@ -11,6 +11,7 @@ public class testUpload extends TestBase {
     public void testUpload () throws InterruptedException {
         loginForm.authenticateLoginForm();
         homePage.userSetting();
+        homePage.uploadImage();
     }
 
 }

@@ -12,7 +12,12 @@ import static com.codeborne.selenide.Selenide.$;
  */
 public class LoginForm {
 
-    public void authenticateLoginForm(){
+    public void authenticateLoginForm() throws InterruptedException {
+        Thread.sleep(4000);
+        $("#email").setValue("bent533@gmail.com");
+        $("#password").setValue("123456789123456789");
+        Thread.sleep(1000);
+        $("button[type='submit']").click();
 
     }
 

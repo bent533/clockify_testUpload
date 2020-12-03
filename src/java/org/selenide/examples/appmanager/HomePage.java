@@ -3,6 +3,9 @@ package org.selenide.examples.appmanager;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
+
+import java.io.File;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import static com.codeborne.selenide.Selectors.byText;
@@ -19,9 +22,16 @@ public class HomePage {
 
 
     //Метод перехода в настройки пользователя
-    public void userSetting(String nameTab) throws InterruptedException {
+    public void userSetting() throws InterruptedException {
         Thread.sleep(5000);
-        $(byText(nameTab)).click();
+        $(byText("Be")).click();
+        $(byText("Profile settings")).click();
+    }
+
+    //Метод загрузки аватарки
+    public void uploadImage ()
+    {
+        $("input[type='file']").uploadFile(new File("src/java/org/selenide/examples/tests/resources/ava.jpg"));
     }
 
 

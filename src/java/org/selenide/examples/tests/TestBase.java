@@ -33,7 +33,7 @@ public class TestBase {
     @Before
     public void setup() {
         chrome();
-        homePage = open("https://clockify.me/", HomePage.class);
+        homePage = open("https://clockify.me/login", HomePage.class);
 
     }
 
